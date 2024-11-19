@@ -21,9 +21,30 @@ def members(request):
     return HttpResponse(template.render(context, request))
 
 def details(request, id):
+    """Retrieves a specific Member b id and renders the details in a template
+
+    Args:
+        request (HttpRequest): Django object containing all information about the request (method, headers, cookies, ...)
+        id (int): Representation of the Member's ID to be retrieved from the DB.
+
+    Returns:
+        HttpResponse: Rendered HML from the template with the object passed in the context
+    """
     mymember = Member.objects.get(id=id)
     template = loader.get_template('details.html')
     context = {
         'mymember': mymember,
     }
     return HttpResponse(template.render(context, request))
+
+def main(request):
+    """This function loads and outputs HTML rendered template
+
+    Args:
+        request (HttpRequest): Object containing metadata about the request
+
+    Returns:
+        HttpResponse: Object contains the rendered html template
+    """
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())
