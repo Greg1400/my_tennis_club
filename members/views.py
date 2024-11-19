@@ -48,3 +48,18 @@ def main(request):
     """
     template = loader.get_template('main.html')
     return HttpResponse(template.render())
+
+def testing(request):
+    """Function that loads a template and the HTML render receives a context
+
+    Args:
+        request (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    template = loader.get_template('template.html')
+    context = {
+        'fruits': ['Apple', 'Banana', 'Cherry'],
+    }
+    return HttpResponse(template.render(context, request))
