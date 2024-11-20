@@ -9,7 +9,7 @@ import sphinx_bootstrap_theme
 import sphinxcontrib
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../')) # Adds project root of python path
+sys.path.insert(0, os.path.abspath('..')) # Adds project root of python path
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'my_tennis_club/settings.py'
 
