@@ -6,28 +6,22 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import sphinx_bootstrap_theme
-import sphinxcontrib
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..')) # Adds project root of python path
-
-os.environ['DJANGO_SETTINGS_MODULE'] = 'my_tennis_club/settings.py'
+sys.path.insert(0, os.path.abspath('..'))
 
 project = 'My Tennis Club'
-copyright = '2024, Herzig Gregoire'
-author = 'Herzig Gregoire'
-release = '0.0.1'
+copyright = '2024, Gregoie Herzig'
+author = 'Gregoie Herzig'
+release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
-    'sphinxcontrib.django',
-    'sphinx.ext.autodoc',
-]
+extensions = ['sphinx.ext.autodoc','sphinx.ext.viewcode','sphinx.ext.napoleon']
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 
 
