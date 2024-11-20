@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Member
 
-# Register your models here.
+"""The use of 'admin.py' is to display the models
+    in the Django Admin Panel.
+"""
+admin.site.register(Member)
