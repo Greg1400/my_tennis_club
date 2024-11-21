@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <!--- this part of code is used to set a variable in a template and display it in HTML page-->
+        <!--- this part of code is used to set a variable in a template and display it in HTML page
         {% with firstname="Tobias" %}
             <h1>Hello {{ firstname }}, how are you ? </h1>
-        {% endwith %}
+        {% endwith %}>-->
+
+        <ul>
+            {% for x in mymembers %}
+                <li>{{ x.firstname }}</li>
+            {% endfor %}
+
+        </ul>
     </body>
 </html>
