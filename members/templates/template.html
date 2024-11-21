@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
     <body>
-
-        {% for x in fruits %}
-            <h1>{{ x }}</h1>
-        {% endfor %}
-
-        <p> In views.py you can see what the fruits variable looks like.</p>
-
+        <!--- this part of code is used to set a variable in a template and display it in HTML page-->
+        {% with firstname="Tobias" %}
+            <h1>Hello {{ firstname }}, how are you ? </h1>
+        {% endwith %}
     </body>
 </html>
