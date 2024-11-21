@@ -12,10 +12,10 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v2
 
-      - name: Set up Git
-        uses: actions/setup-git@v2
+      #- name: Set up Git
+      #  uses: actions/setup-git@v2
 
       - name: Create GitHub release
-        uses: softprops/actions-gh-release@v1
+        uses: softprops/action-gh-release@v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_WORKFLOWS }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE }}
