@@ -18,4 +18,4 @@ jobs:
       - name: Create GitHub release
         uses: softprops/actions-gh-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHHUB_WORKFLOWS }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_WORKFLOWS }}
