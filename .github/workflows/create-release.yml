@@ -1,0 +1,21 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger the workflow to each tag starting with "v"
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        uses: actions/setup-git@v2
+
+      - name: Create GitHub release
+        uses: softprops/actions-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{secret_create-release }}
