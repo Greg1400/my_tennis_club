@@ -1,0 +1,16 @@
+name: Project Automation
+
+on:
+  issues:
+    types: [opened, edited, closed]
+  pull_request:
+    types: [opened, edited, closed]
+
+jobs:
+  update-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      -name: Move Issues and PRs on Project Board
+      uses: alex-page/github-project-automation-plus@v0.6.0
+      
