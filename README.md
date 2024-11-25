@@ -1,3 +1,10 @@
+
+[![CodeQL](https://github.com/Greg1400/my_tennis_club/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/Greg1400/my_tennis_club/actions/workflows/github-code-scanning/codeql)
+
+[![Create Release](https://github.com/Greg1400/my_tennis_club/actions/workflows/create-release.yml/badge.svg?branch=main)](https://github.com/Greg1400/my_tennis_club/actions/workflows/create-release.yml)
+
+[![Django CI](https://github.com/Greg1400/my_tennis_club/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Greg1400/my_tennis_club/actions/workflows/ci.yml)
+
 my_tennis_club
 ==============
 
