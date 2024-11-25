@@ -1,0 +1,35 @@
+name: Automate Issues and Branch Creation
+
+on:
+  issues:
+    types: [opened]
+  project_card:
+    types: [moved]
+
+jobs:
+  handle-issues:
+    name: Handle New Issues
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Move Issue to Project Board
+        if: ${{ github.event_name == 'issues' }}
+        uses: actions/add-to-project@v0.2.0
+        with:
+          project_url: https://github.com/Greg1400/my_tennis_club/projects/10
+          github_token: ${{ secrets.RELEASE }}
+          content_id: ${{ github.event.issue.node_id }}
+          column_name: "In Progress"
+
+      - name: Create Feature Branch
+        if: ${{ github.event_name == 'project_card' && github.event.project_card.column_name == 'In Progress' }}
+        run: |
+          ISSUE_TITLE=$(echo "${{ github.event.project_card.content.title }}" | sed 's/ /-/g' | tr '[:upper:]' '[:lower:]')
+          BRANCH_NAME="feature/${ISSUE_TITLE}"
+          git checkout -b $BRANCH_NAME
+          git push origin $BRANCH_NAME
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE }}
