@@ -1,0 +1,44 @@
+name: CodeQL Analysis
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    name: Analyze code with CodeQL
+
+    steps:
+    # Checkout the repository code
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Set up CodeQL for the analysis
+    - name: Set up CodeQL
+      uses: github/codeql-action/setup-codeql@v2
+
+    # Initialize CodeQL analysis
+    - name: Initialize CodeQL database
+      uses: github/codeql-action/autobuild@v2
+
+    # Perform CodeQL analysis
+    - name: Perform CodeQL analysis
+      uses: github/codeql-action/analyze@v2
+      with:
+        category: "security"
+        analyze: true
+        fail-on-error: false
+
+    # Upload the results as an artifact (optional)
+    - name: Upload CodeQL results as an artifact
+      if: failure()
+      uses: actions/upload-artifact@v2
+      with:
+        name: codeql-results
+        path: ${{ github.workspace }}/codeql-results
