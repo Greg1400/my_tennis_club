@@ -1,0 +1,6 @@
+version: 2
+updates:
+  -package-ecosysten: "pip"
+  directory: "/"
+  schedule:
+    interval: "weekly"

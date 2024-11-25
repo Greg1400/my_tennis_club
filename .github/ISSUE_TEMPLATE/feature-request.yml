@@ -1,0 +1,16 @@
+name: Feature Request
+about: Suggest a new feature for the project.
+title: "[FEATURE] - [Brief description]"
+labels: enhancement
+assignees: ""
+
+fields:
+  - type: textarea
+    label: "Feature Description"
+    description: "Describe the feature you would like to see."
+  - type: textarea
+    label: "Use Case"
+    description: "Provide an example or use case for how this feature would be used."
+  - type: textarea
+    label: "Alternatives"
+    description: "Describe any alternative approaches or solutions you have considered."

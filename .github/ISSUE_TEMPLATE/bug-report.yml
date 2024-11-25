@@ -1,0 +1,22 @@
+name: Bug Report
+about: Report a bug or unexpected behavior in the project
+title: "[BUG] - [Brief description]"
+label: bug
+assignees: "@Greg1400"
+
+fields:
+  - type: textarea
+    label: "Describe the bug"
+    description: "Please describe the bug in detail."
+  - type: textarea
+    label: "Steps to reproduce"
+    description: "Provide steps to reproduce the behavior."
+  - type: textarea
+    label: "Expected behavior"
+    description: "Describe what you expected to happen."
+  - type: textarea
+    label: "Screenshots (if applicable)"
+    description: "Please add screenshots to help explain your problem."
+  - type: textarea
+    label: "Environment"
+    description: "Include the version of Python, Django, or other relevant dependencies."

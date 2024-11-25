@@ -19,14 +19,15 @@ jobs:
         if: ${{ github.event_name == 'issues' }}
         uses: actions/add-to-project@v0.2.0
         with:
-          project_url: https://github.com/Greg1400/my_tennis_club/projects/10
-          github_token: ${{ secrets.RELEASE }}
+          project_url: "https://github.com/Greg1400/my_tennis_club/projects/10"
+          github_token: "${{ secrets.RELEASE }}"
           content_id: ${{ github.event.issue.node_id }}
           column_name: "In Progress"
 
       - name: Create Feature Branch
         if: ${{ github.event_name == 'project_card' && github.event.project_card.column_name == 'In Progress' }}
         run: |
+          echo "Creating a branch for the issue"
           ISSUE_TITLE=$(echo "${{ github.event.project_card.content.title }}" | sed 's/ /-/g' | tr '[:upper:]' '[:lower:]')
           BRANCH_NAME="feature/${ISSUE_TITLE}"
           git checkout -b $BRANCH_NAME

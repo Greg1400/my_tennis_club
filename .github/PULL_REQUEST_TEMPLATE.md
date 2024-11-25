@@ -2,7 +2,7 @@
 Briefly describe the changes in this PR and their purpose.
 
 ## Type of Change
-Select one :
+Select one:
 - [ ] Bugfix
 - [ ] New feature
 - [ ] Documentation update

@@ -1,0 +1,13 @@
+name: Custom Issue Template
+about: Custom issue (e.g., technical debt, question, etc.)
+title: "[CUSTOM] - [Brief description]"
+labels: question
+assignees: ""
+
+fields:
+  - type: textarea
+    label: "Issue Description"
+    description: "Provide a detailed description of the issue or question."
+  - type: textarea
+    label: "Impact"
+    description: "Describe the impact of this issue or question on the project."

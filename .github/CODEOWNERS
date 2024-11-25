@@ -1,0 +1,4 @@
+# Define ownership for key files or directories
+*.py    @Greg1400
+*.yml   @Greg1400
+docs/   @Greg1400
