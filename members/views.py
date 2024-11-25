@@ -58,9 +58,5 @@ def testing(request):
     Returns:
         _type_: _description_
     """
-    mymembers = Member.objects.all().values()
     template = loader.get_template('template.html')
-    context = {
-        'mymembers': mymembers,
-    }
     return HttpResponse(template.render(context, request))
