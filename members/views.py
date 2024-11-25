@@ -59,4 +59,4 @@ def testing(request):
         _type_: _description_
     """
     template = loader.get_template('template.html')
-    return HttpResponse(template.render(context, request))
+    return HttpResponse(template.render())
