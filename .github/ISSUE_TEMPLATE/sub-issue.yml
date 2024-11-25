@@ -19,3 +19,6 @@ body:
 
         ## Notes
         - Add any additional details or context that might be helpful for resolving this sub-issue.
+  - type: textarea
+    attributes:
+      label: "What's wrong?"
