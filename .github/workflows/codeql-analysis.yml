@@ -25,15 +25,15 @@ jobs:
 
     # Initialize CodeQL analysis
     - name: Initialize CodeQL database
-      uses: github/codeql-action/autobuild@v2
+      uses: github/codeql-action/autobuild@v2.19.3
 
     # Perform CodeQL analysis
     - name: Perform CodeQL analysis
-      uses: github/codeql-action/analyze@v2
+      uses: github/codeql-action/analyze@v2.19.3
       with:
+        # Use the correct inputs for the analyse steps
         category: "security"
-        analyze: true
-        fail-on-error: false
+        upload: true
 
     # Upload the results as an artifact (optional)
     - name: Upload CodeQL results as an artifact
