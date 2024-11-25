@@ -1,0 +1,21 @@
+name: Create Sub-Issues for Parent Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create-sub-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Create sub-issue for the parent issue
+        uses: peter-evans/create-issue-from-file@v2
+        with:
+          title: "Sub-Issue for ${{ github.event.issue.title }}"
+          content-filepath: .github/ISSUE_TEMPLATE/sub-issue.yml
+          assignees: ""
+          labels: "sub-issue"
+          github-token: ${{ secrets.RELEASE }}

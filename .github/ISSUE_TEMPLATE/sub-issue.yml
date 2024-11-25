@@ -1,0 +1,21 @@
+name: Sub-Issue Template
+description: A sub-task related to a larger feature or bugfix
+labels: sub-issue
+assignees: ''
+title: "[SUB-ISSUE] Related to #[PARENT_ISSUE_NUMBER]"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Description
+        Please describe the sub-task or the issue in more detail.
+
+        ## Parent Issue
+        This sub-issue is related to the parent issue: [#{{ parent_issue_number }}](https://github.com/{{ owner }}/{{ repo }}/issues/{{ parent_issue_number }}).
+
+        ## Tasks
+        - [ ] Task 1 (describe the sub-task)
+        - [ ] Task 2 (describe another sub-task)
+
+        ## Notes
+        - Add any additional details or context that might be helpful for resolving this sub-issue.
