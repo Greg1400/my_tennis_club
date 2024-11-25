@@ -19,6 +19,7 @@ Contents
    api_reference
    tutorials/basic_usage
    guides/deployment
+   guides/DjangoTags
    dev/setup
    modules
 
