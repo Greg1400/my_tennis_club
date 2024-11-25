@@ -10,8 +10,8 @@
             {% for x in mymembers %}
                 <li>{{ x.firstname }}</li>
             {% endfor %}
-
-            {% templatetag openblock %}
-        </ul>
+            {% if %}
+            {% {% endif %}%}
+            {% templatetag openblock %}z        </ul>
     </body>
 </html>
