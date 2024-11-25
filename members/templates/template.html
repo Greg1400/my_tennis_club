@@ -6,12 +6,20 @@
             <h1>Hello {{ firstname }}, how are you ? </h1>
         {% endwith %}>-->
 
-        <ul>
+     
+{% comment %}             <ul>
             {% for x in mymembers %}
                 <li>{{ x.firstname }}</li>
             {% endfor %}
-            {% if %}
-            {% {% endif %}%}
-            {% templatetag openblock %}z        </ul>
+            {% templatetag openblock %}        </ul> {% endcomment %}
+    
+        {% include "mymenu.html" with me="GREGOIRE" sponsor="W3SCHOOL" %}
+        <h1>Hello</h1>
+
+        <p>This page contains a footer in a template.</p>
+
+        {% include 'footer.html' %}
+
+        <p>Check out the two templates to see what they look like, and views.py to see the reference to the child template.</p>
     </body>
 </html>
