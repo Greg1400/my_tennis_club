@@ -1,7 +1,7 @@
 name: Sub-Issue Template
 description: A sub-task related to a larger feature or bugfix
 labels: sub-issue
-assignees: ''
+assignees: ""
 title: "[SUB-ISSUE] Related to #[PARENT_ISSUE_NUMBER]"
 body:
   - type: markdown
