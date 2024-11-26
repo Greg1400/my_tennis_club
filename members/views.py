@@ -4,8 +4,8 @@ from .models import Member
 """
 The details view does the following:
 
-Gets the id as an argument.
-Uses the id to locate the correct record in the Member table.
+Gets the slug as an argument.
+Uses the slug to locate the correct record in the Member table.
 loads the details.html template.
 Creates an object containing the member.
 Sends the object to the template.
@@ -20,17 +20,17 @@ def members(request):
     }
     return HttpResponse(template.render(context, request))
 
-def details(request, id):
-    """Retrieves a specific Member b id and renders the details in a template
+def details(request, slug):
+    """Retrieves a specific Member b slug and renders the details in a template
 
     Args:
         request (HttpRequest): Django object containing all information about the request (method, headers, cookies, ...)
-        id (int): Representation of the Member's ID to be retrieved from the DB.
+        slug (int): Representation of the Member's slug to be retrieved from the DB.
 
     Returns:
         HttpResponse: Rendered HML from the template with the object passed in the context
     """
-    mymember = Member.objects.get(id=id)
+    mymember = Member.objects.get(slug=slug)
     template = loader.get_template('details.html')
     context = {
         'mymember': mymember,
